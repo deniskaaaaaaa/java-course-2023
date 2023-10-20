@@ -7,6 +7,7 @@ on:
 
 jobs:
   build:
+
     runs-on: ubuntu-latest
 
     steps:
@@ -17,10 +18,9 @@ jobs:
       uses: actions/setup-java@v2
       with:
         java-version: 11
-        distribution: 'adopt'
-        
+
     - name: Build with Maven
-      run: mvn -B clean package
+      run: mvn -B -f project-template/pom.xml clean package
 
     - name: Checkstyle
-      run: mvn checkstyle:check
+      run: mvn -f project-template/pom.xml checkstyle:check

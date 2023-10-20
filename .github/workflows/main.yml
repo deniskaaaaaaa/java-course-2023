@@ -15,12 +15,12 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Set up Java JDK
-  uses: actions/setup-java@v2
-  with:
-  java-version: 21
+      uses: actions/setup-java@v2
+      with:
+        java-version: 21  # Замените это значение на 21 или более новое
 
     - name: Build with Maven
       run: mvn -B -f project-template/pom.xml clean package
 
     - name: Checkstyle
-      run: mvn -f project-template/pom.xml checkstyle:check
+      run: mvn checkstyle:check

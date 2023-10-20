@@ -7,7 +7,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -24,3 +23,6 @@ jobs:
 
     - name: Checkstyle
       run: mvn checkstyle:check
+
+    - name: Distribution Setup
+      run: # Add distribution setup here

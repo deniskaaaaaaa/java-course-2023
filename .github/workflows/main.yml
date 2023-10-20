@@ -30,5 +30,6 @@ jobs:
     - name: Build with Maven
       run: mvn -B -f project-template/pom.xml clean package
 
+
     - name: Checkstyle
       run: mvn checkstyle:check

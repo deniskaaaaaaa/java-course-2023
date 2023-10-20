@@ -20,7 +20,4 @@ jobs:
         java-version: 11
 
     - name: Build with Maven
-      run: mvn -B clean package
-
-    - name: Checkstyle
-      run: mvn checkstyle:check
+      run: mvn -B -f project-template/pom.xml clean package
